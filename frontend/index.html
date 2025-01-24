@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .recommendation {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz Recommendations</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="file">Upload Quiz Data (CSV):</label>
+        <input type="file" name="file" id="file" required>
+        <button type="submit">Upload</button>
+    </form>
+    <hr>
+    <p>Here are some tips to improve your performance:</p>
+    {% for rec in recommendations %}
+        <div class="recommendation">
+            <strong>Topic:</strong> {{ rec.topic }}<br>
+            <strong>Tip:</strong> {{ rec.tip }}
+        </div>
+    {% endfor %}
+    <h2>Performance Chart</h2>
+    {% if chart %}
+    <img src="/static/chart.png" alt="Performance Chart">
+
+    {% endif %}
+    <h2>Detailed Insights</h2>
+{% if insights %}
+    <div>
+        <h3>Strong Topics</h3>
+        <ul>
+            {% for topic in insights.strong_topics %}
+                <li>{{ topic }}</li>
+            {% endfor %}
+        </ul>
+        <h3>Weak Topics</h3>
+        <ul>
+            {% for topic in insights.weak_topics %}
+                <li>{{ topic }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+
+</body>
+</html>
