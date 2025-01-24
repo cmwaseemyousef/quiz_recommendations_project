@@ -13,3 +13,13 @@ Follow these steps to set up and run the project:
    git clone <https://github.com/cmwaseemyousef/quiz_recommendations_project.git>
    cd quiz_recommendations_project
 
+## Screenshots
+
+- **File Upload Section**:
+  ![File Upload Section](screenshots/file_upload.png)
+
+- **Recommendations and Insights**:
+  ![Recommendations](screenshots/recommendations.png)
+
+- **Performance Chart**:
+  ![Performance Chart](screenshots/performance_chart.png)
