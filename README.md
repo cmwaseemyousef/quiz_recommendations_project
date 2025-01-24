@@ -10,6 +10,6 @@ Follow these steps to set up and run the project:
 
 1. Clone this repository:
    ```bash
-   git clone <your-repo-url>
+   git clone <https://github.com/cmwaseemyousef/quiz_recommendations_project.git>
    cd quiz_recommendations_project
 
